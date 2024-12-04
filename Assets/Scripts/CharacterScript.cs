@@ -21,11 +21,17 @@ public class CharacterScript : MonoBehaviour
 
     private bool isOnGround = false;     // Персонаж на земле?
 
+    private float burstPeriod = 10f;
+    private float burstLeft;
+
+    public float burstLevel => burstLeft / burstPeriod;
+
     void Start()
     {
         moveAction = InputSystem.actions.FindAction("Move");
         characterController = GetComponent<CharacterController>();
-        cameraTransform = Camera.main.transform; // Найти основную камеру
+        cameraTransform = Camera.main.transform;
+        GameState.AddListener(nameof(GameState.isBurst), OnBurstChanged);
     }
 
     void Update()
@@ -98,35 +104,33 @@ public class CharacterScript : MonoBehaviour
         // Наклон персонажа
         this.transform.forward = cameraTransform.forward;
     }
+
+    private void LateUpdate()
+    {
+        if(burstLeft > 0f)
+        {
+            burstLeft -= Time.deltaTime;
+            if(burstLeft < 0f)
+            {
+                burstLeft = 0f;
+                GameState.isBurst = false;
+            }
+        }
+    }
+
+    private void OnBurstChanged(string ignored)
+    {
+        if (GameState.isBurst)
+        {
+            Debug.Log("Burst");
+        }
+    }
+
+    private void OnDestroy()
+    {
+        GameState.RemoveListener(nameof(GameState.isBurst), OnBurstChanged);
+    }
+
 }
 
-    //private InputAction moveAction;
-    //private CharacterController characterController;
-    //private float speedFactor = 5f; 
-    //private float maxY = 20f; 
-    //void Start()
-    //{
-    //    moveAction = InputSystem.actions.FindAction("Move");
-    //    characterController = GetComponent<CharacterController>();
-    //}
-
-    //void Update()
-    //{
-    //    Vector2 moveValue = moveAction.ReadValue<Vector2>();
-    //    Vector3 move = Camera.main.transform.forward;
-    //    move.y = 0.0f;
-    //    if(move == Vector3.zero)
-    //    {
-    //        move = Camera.main.transform.up;
-    //    }
-    //    move.Normalize();
-    //    Vector3 moveForward = move;
-    //    move += moveValue.x * Camera.main.transform.right;
-    //    move.y = moveValue.y;
-    //    move.y -= 30f * Time.deltaTime;
-        
-    //    characterController.Move(speedFactor * Time.deltaTime * move);
-    //    this.transform.forward = moveForward;
-        
-    //}
-//}
+   
