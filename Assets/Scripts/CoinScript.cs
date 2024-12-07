@@ -5,10 +5,12 @@ public class CoinScript : MonoBehaviour
     private float minOffset = 100f;
     private float minDistance = 100f;
     private CoinCounterScript coinCounter;
+    private AudioSource catchSource;
 
     void Start()
     {
         coinCounter = FindFirstObjectByType<CoinCounterScript>();
+        catchSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -21,6 +23,7 @@ public class CoinScript : MonoBehaviour
         {
             Vector3 newPosition;
             coinCounter.AddCoin();
+            catchSource.Play();
 
             do
             {

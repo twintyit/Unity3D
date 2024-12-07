@@ -21,8 +21,9 @@ public class CameraScript : MonoBehaviour
     void Update()
     {
         Vector2 lookValue = lookAction.ReadValue<Vector2>();
-        angleH += lookValue.x * 0.05f;
-        angleV -= lookValue.y * 0.05f;
+        angleH += lookValue.x * 3f * Time.deltaTime;
+        angleV -= lookValue.y * 3f * Time.deltaTime;
+        angleV -= lookValue.y * 3f * Time.deltaTime;
         if(angleV <= 0f) 
         { 
             angleV = 0f;
