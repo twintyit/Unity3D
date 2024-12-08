@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 8a3566550e9c0ba46b78e7bcdcb9d056
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 121728
+  packageName: Single Street Lamp
+  packageVersion: 1.0
+  assetPath: Assets/StreetLampType3Free/Prefabs/street_lamp_3.prefab
+  uploadId: 255161

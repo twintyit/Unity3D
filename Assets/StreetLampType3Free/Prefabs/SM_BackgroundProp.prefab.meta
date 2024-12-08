@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ade994207829ae342969625bcd452668
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 121728
+  packageName: Single Street Lamp
+  packageVersion: 1.0
+  assetPath: Assets/StreetLampType3Free/Prefabs/SM_BackgroundProp.prefab
+  uploadId: 255161

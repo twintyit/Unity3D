@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: bc11ead518e9d024893df2ebe6e1b123
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 121728
+  packageName: Single Street Lamp
+  packageVersion: 1.0
+  assetPath: Assets/StreetLampType3Free/Materials/LampMetal.mat
+  uploadId: 255161

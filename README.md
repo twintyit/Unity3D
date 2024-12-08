@@ -1,2 +1,1 @@
-![Демонстрация](/Videos/vid1.gif)
-![Демонстрация](/Videos/vid2.gif)
+![Демонстрация](/Videos/vid1.mkv)

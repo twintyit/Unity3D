@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 2e5eb77dc76664142b506169c1ea8989
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 121728
+  packageName: Single Street Lamp
+  packageVersion: 1.0
+  assetPath: Assets/StreetLampType3Free/Materials/LampGlass.mat
+  uploadId: 255161

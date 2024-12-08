@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 2e934dcf813fe674fb7023a2325b5432
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 121728
+  packageName: Single Street Lamp
+  packageVersion: 1.0
+  assetPath: Assets/StreetLampType3Free/Materials/Street.mat
+  uploadId: 255161
